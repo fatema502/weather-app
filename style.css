@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #252540);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    color: #fff;
+}
+
+h1 {
+   margin-bottom: 20px;
+}
+
+.container {
+   background: rgba(255, 255, 255, 0.1); /* light transparent bg */
+    backdrop-filter: blur(15px);           /* glass effect */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    padding: 40px 35px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Subtle scale on hover */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    color: #333;
+    padding: 12px 25px;
+    height: 60px;
+    border-radius: 60px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Glow when focused */
+.search-box input:focus {
+    box-shadow: 0 0 10px rgba(91, 84, 138, 0.6);
+    transform: scale(1.02);
+}
+
+#search-btn {
+    border: none;
+    outline: none;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+#search-btn:hover {
+    background: #d6f7f2;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 12px rgba(0, 255, 186, 0.6);
+}
+
+/* Click effect */
+#search-btn:active {
+    transform: scale(0.95);
+}
+
+#search-btn img {
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+#search-btn:hover img {
+    transform: rotate(20deg) scale(1.1);
+}
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+    transition: transform 0.4s ease;
+}
+
+/* Small bounce when icon changes */
+.weather-icon.show {
+    transform: scale(1.1);
+}
+
+.weather-info h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.weather-info h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.column img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 30px;
+    margin-top: -6px;
+}
+
+.description{
+   
+    font-size: 30px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: capitalize;
+     color: #f0f0f0;
+}
+
+.weather-info .city {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: -5px;
+    color: #fff;
+}
+
+.clear-bg {
+  background: linear-gradient(135deg, #fceabb, #f8b500); /* sunny yellow */
+}
+
+.clouds-bg {
+  background: linear-gradient(135deg, #757f9a, #d7dde8); /* grayish clouds */
+}
+
+.rain-bg {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb); /* bluish rain */
+}
+
+.snow-bg {
+  background: linear-gradient(135deg, #83a4d4, #b6fbff); /* icy snow */
+}
+
+.drizzle-bg {
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* light rain */
+}
+
+.mist-bg {
+  background: linear-gradient(135deg, #3e5151, #decba4); /* foggy */
+}
+
